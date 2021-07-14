@@ -3,29 +3,28 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 10;
     width: 100vw;
     height: 100vh;
     background-color: var(--maket-color);
     //   скрол
     overflow: auto;
+
     // спрятала меню
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    background-color: #ffffff;
 
-    &menu__container {
+    &__container {
       position: relative;
-      padding-left: 25px;
       padding-top: 48px;
       padding-bottom: 48px;
     }
 
     &__close-btn {
       position: absolute;
-      top: 21px;
-      right: 25px;
+      top: 10px;
+      right: 10px;
       border: none;
       background-color: transparent;
       padding: 0;
@@ -44,7 +43,7 @@
     }
 
     &__nav {
-      margin-bottom: 302px;
+      margin-bottom: 300px;
     }
 
     &__contacts {
@@ -94,10 +93,20 @@
       letter-spacing: 0.02em;
     }
 
-    &__social-link::after {
-      content: "|";
-      color: var(--titel-text-color);
-      padding: 10px;
+    &__social-item::after {
+      content: "";
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      transform: rotate(90deg);
+      height: 22px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    &__social-item:last-child::after {
+      content: "";
+      border: none;
+      margin-right: 0px;
+      width: 0px;
     }
 
     &__color-menu {

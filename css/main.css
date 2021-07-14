@@ -35,7 +35,6 @@ body {
 }
 
 .container {
-  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -958,13 +957,25 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
   padding: 40px;
   background: var(--maket-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 320px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-close-dtn {
@@ -1010,7 +1021,7 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 10;
     width: 100vw;
     height: 100vh;
     background-color: var(--maket-color);
@@ -1018,18 +1029,16 @@ img {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    background-color: #ffffff;
   }
-  .mobile-menumenu__container {
+  .mobile-menu__container {
     position: relative;
-    padding-left: 25px;
     padding-top: 48px;
     padding-bottom: 48px;
   }
   .mobile-menu__close-btn {
     position: absolute;
-    top: 21px;
-    right: 25px;
+    top: 10px;
+    right: 10px;
     border: none;
     background-color: transparent;
     padding: 0;
@@ -1044,7 +1053,7 @@ img {
     pointer-events: auto;
   }
   .mobile-menu__nav {
-    margin-bottom: 302px;
+    margin-bottom: 300px;
   }
   .mobile-menu__contacts {
     margin-bottom: 64px;
@@ -1084,10 +1093,19 @@ img {
     line-height: 22px;
     letter-spacing: 0.02em;
   }
-  .mobile-menu__social-link::after {
-    content: "|";
-    color: var(--titel-text-color);
-    padding: 10px;
+  .mobile-menu__social-item::after {
+    content: "";
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+    height: 22px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .mobile-menu__social-item:last-child::after {
+    content: "";
+    border: none;
+    margin-right: 0px;
+    width: 0px;
   }
   .mobile-menu__color-menu {
     color: var(--primary-text-color);
