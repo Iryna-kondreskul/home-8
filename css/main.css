@@ -1043,6 +1043,9 @@ img {
     visibility: visible;
     pointer-events: auto;
   }
+  .mobile-menu__nav {
+    margin-bottom: 302px;
+  }
   .mobile-menu__contacts {
     margin-bottom: 64px;
   }
