@@ -1,0 +1,25 @@
+/* Затемнение */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--blackout);
+  z-index: 100;
+
+  /* opacity: 1;
+    visibility: visible;
+    pointer-events: auto; */
+
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+
+.is-hidden {
+  /* Полностью прозрачный */
+  opacity: 0;
+  /* все содержимое  backdrop спрятано*/
+  visibility: hidden;
+  /*  пользователь не может найти мышкой интерактивный элемент на backdrop*/
+  pointer-events: none;
+}

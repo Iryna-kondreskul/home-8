@@ -1,0 +1,112 @@
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/index/Img.jpg), url(../images/index/bg.jpg);
+
+  @media (min-device-pixel-ratio: 2) and (max-width: 767px),
+    (min-resolution: 192dpi) and (max-width: 767px),
+    (min-resolution: 2dppx) and (max-width: 767px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/mobile/studia/header_img_mobile_@2x.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/tablet/studia/header_tablet_@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and(min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/tablet/studia/header_tablet_@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/desktop/studia/img_header_desctop_@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and(min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/desktop/studia/img_header_desctop_@1x.jpg);
+    }
+  }
+}
+
+/* Эффективное решение для вашего бизнеса */
+
+.hero__name {
+  // max-width: 696px;
+  margin: 0 auto 30px;
+  font-weight: 900;
+  // font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--maket-color);
+
+  //   @media screen and(min-width:320px) {
+  //     max-width: 360px;
+  //     font-size: 26px;
+  //   }
+
+  //   @media screen and(min-width:768px) {
+  //     max-width: 360px;
+  //     font-size: 26px;
+  //   }
+
+  //   @media screen and(min-width:1024px) {
+  //     max-width: 696px;
+  //     font-size: 44px;
+  //   }
+}
+/* Кнопка */
+.hero__modal-btn {
+  display: inline-block;
+  font-family: inherit;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+
+  color: var(--maket-color);
+  background-color: var(--accent-color);
+
+  cursor: pointer;
+  border: transparent;
+
+  padding: 10px 32px;
+  margin: auto;
+}

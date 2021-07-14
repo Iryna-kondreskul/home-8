@@ -1,0 +1,131 @@
+.mobile-menu {
+  @media screen and(max-width:767px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--maket-color);
+    //   скрол
+    overflow: auto;
+    // спрятала меню
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background-color: #ffffff;
+
+    &menu__container {
+      position: relative;
+      padding-left: 25px;
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+
+    &__close-btn {
+      position: absolute;
+      top: 21px;
+      right: 25px;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      transition: color 2050ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__close-btn:hover,
+    &__close-btn:focus {
+      color: var(--accent-color);
+    }
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    &__nav {
+      // margin-bottom: 302px;
+    }
+
+    &__contacts {
+      margin-bottom: 64px;
+    }
+
+    &__social {
+      display: flex;
+    }
+    &__social:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &__item,
+    &__contacts-item,
+    &__tel-item {
+      margin-bottom: 32px;
+    }
+
+    &__link {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.18;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__tel-item {
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+    }
+
+    &__contacts-link {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+    }
+
+    &__social-link {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+    }
+
+    &__social-link::after {
+      content: "|";
+      color: var(--titel-text-color);
+      padding: 10px;
+    }
+
+    &__color-menu {
+      color: var(--primary-text-color);
+    }
+
+    &__color-activ-link {
+      color: var(--accent-color);
+    }
+
+    &__color-email {
+      color: var(--titel-text-color);
+    }
+  }
+
+  @media screen and(min-width:768px) {
+    &__close-btn {
+      display: none;
+    }
+  }
+
+  @media screen and(min-width:768px) {
+    &__social {
+      display: none;
+    }
+  }
+
+  @media screen and(min-width:768px) {
+    display: none;
+  }
+}
